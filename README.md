@@ -1,2 +1,1 @@
-Lecture 22
-Hello!
+Lecture 2
