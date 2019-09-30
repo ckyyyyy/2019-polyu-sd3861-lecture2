@@ -1,0 +1,161 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 400px;
+}
+
+body {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  font-family: arial;
+  font-size: 12px;
+  flex-direction: column;
+}
+
+svg {
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cloud {
+  transform-origin: 50%;
+  &.blur {
+    filter: url(#blur);
+  }
+}
+
+// Credit to @billyysea for the sky gradients
+// https://codepen.io/billyysea/pen/whjbK?editors=1100
+
+.sky-gradient-0 {
+  background: linear-gradient(to bottom, #4a4969 0%, #7072ab 50%, #cd82a0 100%);
+}
+
+.sky-gradient-1 {
+  background: linear-gradient(to bottom, #757abf 0%, #8583be 60%, #eab0d1 100%);
+}
+
+.sky-gradient-2 {
+  background: linear-gradient(to bottom, #82addb 0%, #ebb2b1 100%);
+}
+
+.sky-gradient-3 {
+  background: linear-gradient(to bottom, #94c5f8 1%, #a6e6ff 70%, #b1b5ea 100%);
+}
+
+.sky-gradient-4 {
+  background: linear-gradient(to bottom, #1e528e 0%, #265889 50%, #9da671 100%);
+}
+.sky-gradient-5 {
+  background: linear-gradient(to bottom, #1e528e 0%, #728a7c 50%, #e9ce5d 100%);
+}
+.sky-gradient-6 {
+  background: linear-gradient(
+    to bottom,
+    #154277 0%,
+    #576e71 30%,
+    #e1c45e 70%,
+    #b26339 100%
+  );
+}
+.sky-gradient-7 {
+  background: linear-gradient(
+    to bottom,
+    #163c52 0%,
+    #4f4f47 30%,
+    #c5752d 60%,
+    #b7490f 80%,
+    #2f1107 100%
+  );
+}
+
+button {
+  border: 1px solid #333;
+  border-radius: 2em;
+  background: transparent;
+  padding: 0.75em;
+  font-size: 1.2em;
+  margin-top: 2em;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.pop {
+  animation: pop 0.3s ease-in-out forwards;
+}
+
+.slidein {
+  animation: slidein 1s ease-out forwards;
+}
+
+.fromLeft {
+  animation: fromleft 1s ease-out forwards;
+}
+
+.fromRight {
+  animation: fromright 1s ease-out forwards;
+}
+
+#mountain,
+.highlight {
+  transform-origin: 50% 100%;
+}
+
+button:focus {
+  outline: 0;
+}
+
+@keyframes slidein {
+  from {
+    transform: scale(0.925);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes fromleft {
+  from {
+    transform: translateX(-1px);
+  }
+  to {
+        transform: translateX(0px);
+  }
+}
+
+@keyframes fromright {
+  from {
+    transform: translateX(1px);
+  }
+  to {
+        transform: translateX(0px);
+  }
+}
+
+@keyframes clouds {
+  from {
+    transform: translateX((random(11) + 4)px);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0);
+  }
+  75%,
+  100% {
+    transform: scale(1);
+  }
+}
