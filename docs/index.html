@@ -2,35 +2,42 @@
 <html>
 
 <head>
-<meta charset="UTF-8">
-<title>wohoo</title>
-<link href="styles.css" type="text/css" rel="stylesheet" />
-<style>
-body{
-    font-family: 'Anton', sans-serif;
-}
-h1{
-    font-size: 50px;
-    font-family: 'Josefin Sans', sans-serif;
-}
-#first-heading{
-    font-weight: bold;
-    font-family: 'Pacifico', cursive;
-    color:yellow
-}
-</style>
+    <meta charset="UTF-8">
+    <title>wohoo</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Pacifico&display=swap" rel="stylesheet">
+    <link href="styles.css" type="text/css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Anton', sans-serif;
+        }
+
+        h1 {
+            font-size: 50px;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        #first-heading {
+            font-weight: bold;
+            font-family: 'Pacifico', cursive;
+            color: yellow
+        }
+    </style>
 
 
 </head>
 
-<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet" />
 <body>
-    <h1>Liberate Hong Kong</h1>
+    <h1 id="first-heading{
+        font-weight: bold;
+        font-family: 'Pacifico', cursive;
+        color: yellow
+        ">Liberate Hong Kong</h1>
+    
 
 
     <svg class="pop" id="svg" width="100" height="100" viewbox="0 0 100 100">
         <filter id="blur">
-          <feGaussianBlur stdDeviation="1" />
+            <feGaussianBlur stdDeviation="1" />
         </filter>
         <path class="slidein" id="mountain" fill="#ab9457" d="" />
     </svg>
@@ -40,11 +47,12 @@ h1{
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript">
-        $(document).ready(function(){
-            $('button').on('click', function(e){
+        $(document).ready(function () {
+            $('button').on('click', function (e) {
                 alert('New mountain is coming!');
             });
         });
     </script>
 </body>
+
 </html>
